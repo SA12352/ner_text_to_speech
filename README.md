@@ -1,80 +1,38 @@
-# ner_text_to_speech
-A Streamlit app that extracts named entities from customer queries using SpaCy and speaks the results using gTTS.
-🔎 Named Entity Recognition (NER) with Text-to-Speech
+# Named Entity Recognition App  
 
-This project extracts key entities (like Person, Location, Date, Organization) from customer queries using SpaCy and also speaks the results aloud using gTTS (Google Text-to-Speech).
+This is a simple **NER (Named Entity Recognition)** web app built with **Streamlit** and **spaCy**. You can enter any text query, and the app will extract entities (like names, places, dates, etc.) from it.  
 
-📌 Features
+## Features  
+- Extract entities from text queries  
+- Built using **spaCy**  
+- User-friendly **Streamlit** interface  
 
-Extracts entities from text (Person, Place, Date, etc.)
+## Installation & Run  
 
-Displays entities in a table format
+Clone the repository:  
+git clone https://github.com/SA12352/ner-app.git  
+cd ner-app  
 
-Highlights entities inside the sentence
+Install dependencies:  
+pip install -r requirements.txt  
 
-Converts the extracted entities into speech (audio output)
+Run the Streamlit app:  
+streamlit run app.py  
 
-Simple Streamlit-based web app
+Now open the app in your browser at:  
+http://localhost:8501  
 
-🛠️ Technologies Used
+## Example  
 
-Python
+**Input:** Barack Obama was born in Hawaii and became the 44th President of the USA.  
 
-Streamlit
+**Output:**  
+- Barack Obama → PERSON  
+- Hawaii → GPE  
+- 44th → ORDINAL  
+- USA → GPE  
 
-SpaCy
+---
 
-gTTS
+⚡ Made with ❤️ using **Python, spaCy, and Streamlit**
 
-Pandas
-
-⚡ Installation & Setup
-
-Clone this repository:
-
-git clone https://github.com/SA12352/ner_text_to_speech.git
-cd ner_text_to_speech
-
-
-Create virtual environment (optional but recommended):
-
-python -m venv venv
-venv\Scripts\activate   # For Windows
-source venv/bin/activate  # For Mac/Linux
-
-
-Install dependencies:
-
-pip install -r requirements.txt
-
-
-Download SpaCy English model:
-
-python -m spacy download en_core_web_sm
-
-
-Run the Streamlit app:
-
-streamlit run app.py
-
-🖥️ Usage Example
-
-Input:
-
-I want to meet Dr. Sarah in Islamabad next week.
-
-
-Output:
-
-Entity	Label
-Sarah	PERSON
-Islamabad	GPE
-next week	DATE
-
-The app will also speak:
-
-I found the following entities: Sarah (Person), Islamabad (Location), next week (Date)
-
-📜 License
-
-This project is licensed under the MIT License – feel free to use and modify.
