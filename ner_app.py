@@ -112,4 +112,3 @@ def main():
             st.error("Please enter some text.")
 
 if __name__ == "__main__":
-    main()
